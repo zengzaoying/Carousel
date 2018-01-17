@@ -1,0 +1,437 @@
+/*隐藏滑轮*/
+:root {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/*清除样式*/
+body, i, b, header, section, footer, html, ul, li, dt, dl, dd, h1, h2, h3, h4, h5, h6, p, form, fieldset, legend, img, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    /*color: #333;*/
+    font-weight: 400;
+    font-family: "Times New Roman";
+}
+
+i, b {
+    font-weight: normal;
+    font-style: normal;
+}
+
+ul, ol, dl {
+    outline-style: none;
+    list-style: none;
+}
+
+img, input, button, fieldset, textarea {
+    border: 0 none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+a {
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+.clearfix:after, .clearfix:before {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/*共用样式*/
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-gray {
+    color: #cccccc;
+}
+
+.text-black {
+    color: #333;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.head-h2 {
+    font-weight: 400;
+    font-size: 72px;
+}
+
+.head-h5 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.2em;
+}
+
+.text-12 {
+    font-size: 12px;
+}
+
+.circle::before {
+    content: "→";
+    margin-right: 15px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+/*.circle::before:hover {*/
+    /*color: rgb(255,80,86) !important;*/
+    /*border-color: rgb(255,80,86) !important;*/
+/*}*/
+
+.line span {
+    display: inline-block;
+    width: 80%;
+    padding-bottom: 5px;
+    line-height:1;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    transition: all .2s linear;
+}
+
+.line:hover span {
+    padding-bottom: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #fff;
+}
+
+.vertical-align {
+    align-items: center;
+}
+
+.dis-flex {
+    display: flex;
+}
+/*header B*/
+header {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/*导航*/
+header>div:nth-child(1) {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 70px;
+    padding: 0 90px;
+    transition: all .2s linear;
+    z-index: 999;
+}
+
+header h1 {
+    float: left;
+    line-height: 70px;
+}
+
+header h1 a {
+    font-size: 36px;
+}
+
+header nav>ul>li {
+    float: left;
+    margin-left: 50px;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 70px;
+}
+
+header li i {
+    margin-left: 15px;
+    font-size: 12px;
+}
+
+header nav .spe {
+    float: right;
+}
+
+header nav .spe a:first-child {
+    margin-right: 15px;
+}
+
+header>div:nth-child(1):hover {
+    background-color: #fff;
+}
+
+header>div:nth-child(1):hover h1 a.text-white {
+    color: #000;
+}
+
+header>div:nth-child(1):hover ul>li a.text-white {
+    color: #333;
+}
+
+header>div:nth-child(1):hover ul>li {
+    color: #ccc;
+}
+
+header li a.text-white:hover {
+    color: rgb(255,80,86) !important;
+}
+
+.submenu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display:none;
+}
+
+.per .submenu {
+    background: url("../images/perspective.jpg") round;
+}
+
+.per .submenu ol {
+    width: 55%;
+    margin: 120px auto;
+}
+
+.per .submenu ol li {
+    width: 40%;
+}
+
+.per .submenu ol li:first-child {
+    float: left;
+}
+
+.per .submenu ol li:last-child {
+    float: right;
+    font-size: 22px;
+}
+
+.per .submenu h2 {
+    font-style: normal;
+    margin-bottom: 30px;
+}
+
+.per .submenu div {
+    line-height: 3em;
+}
+
+nav ul>li:hover .submenu {
+    display: block;
+}
+
+.off .submenu {
+    background: url("../images/offices.jpg") round;
+    padding: 70px 90px;
+    box-sizing: border-box;
+    /*display:block;*/
+}
+
+.off .submenu ul {
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+
+.off .submenu li {
+    line-height: 3em;
+    font-style: normal;
+}
+
+.off .submenu li a {
+    color: #fff;
+}
+
+.off .submenu li a:hover {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fff;
+}
+
+
+/*轮播图*/
+header .head-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.head-banner>ul>li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.head-banner .container {
+    margin-top: 12%;
+}
+
+.head-banner>ul>li:nth-child(1) {
+    background: url("../images/london(1).jpg") round;
+}
+
+.head-banner>ul>li:nth-child(2) {
+    background: url("../images/sydneyhq(1).jpg") round;
+}
+
+.head-banner>ul>li:nth-child(3) {
+    background: url("../images/offices.jpg") round;
+}
+
+.head-banner>ul>li:nth-child(4) {
+    background: url("../images/perspective.jpg") round;
+}
+
+.head-banner>ul>li:nth-child(5) {
+    background: url("../images/expertise.jpg") round;
+}
+
+.head-banner .head-h5 {
+    line-height: 2em;
+}
+
+.head-banner ol {
+    position: absolute;
+    left: 20px;
+    top: 30%;
+
+}
+
+.head-banner ol li {
+    height: 8px;
+    width: 8px;
+    margin-top: 20px;
+    background-color: #ccc;
+}
+
+.active {
+    background-color: rgb(255,80,86) !important;
+}
+/*header E*/
+
+/*section 1*/
+.new {
+    padding: 50px 0;
+}
+
+.new .circle::before {
+    padding: 10px;
+    border-color: #000000;
+}
+
+.new .container h2 {
+    float: left;
+    width: 25%;
+    font-size: 60px;
+}
+
+.new .container div {
+    float: left;
+    width: 65%;
+    line-height: 2em;
+}
+
+.new .container h6 {
+    float: left;
+    width: 10%;
+    height: 100px;
+    line-height: 100px;
+}
+/*section 1*/
+
+/*section 2*/
+.design {
+    padding: 90px 0px;
+    background: #E9E9E9 url("../images/arup_bim_model.png") no-repeat 117% -6%;
+}
+
+.design h2 {
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+
+.design h2 span {
+    color: rgb(255,80,86);
+}
+
+.design .container div {
+    height: 50px;
+}
+
+.design .line span {
+    width: 21%;
+    font-style: italic;
+    border-color: #cccccc;
+}
+
+.design .circle::before {
+    border-color: #000000;
+}
+/*section 2*/
+
+/*section 3*/
+.work {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    background: url("../images/bridge(1).png") round;
+}
+
+.work h2 {
+    width: 60%;
+}
+/*section 3*/
+
+/*footer*/
+footer {
+    padding: 0 90px;
+    height: 90px;
+}
+
+footer div {
+    float: left;
+}
+
+footer div h5, footer div p {
+    float: left;
+    font-size: 18px;
+    line-height: 90px !important;
+    margin-right: 20px;
+}
+
+footer ul {
+    float: right;
+}
+
+footer ul li {
+    float: left;
+    margin-left: 40px;
+    line-height: 90px;
+}
+
+footer ul li a {
+    color: #333333;
+    font-size: 18px;
+    font-style: italic;
+}
+
+/*footer*/
